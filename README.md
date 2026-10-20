@@ -187,74 +187,12 @@ scanner.nextLine(); // Consume el salto de línea pendiente.
 String nombre = scanner.nextLine();
 ```
 
-#### Comprobar antes de leer
+#### Comprobar el formato
 
-`hasNextInt()` permite comprobar el formato antes de llamar a `nextInt()`:
-
-```java
-if (scanner.hasNextInt()) {
-    int edad = scanner.nextInt();
-    System.out.println("Tu edad es: " + edad);
-} else {
-    System.out.println("Debes introducir un número entero.");
-    scanner.nextLine(); // Descarta la entrada incorrecta.
-}
-```
-
-El método `hasNextInt()` no consume el dato. Si devuelve `false`, debemos
-descartarlo con `nextLine()` antes de volver a preguntar.
-
-#### Validar utilizando un bucle
-
-Podemos seguir preguntando hasta recibir un entero válido:
-
-```java
-System.out.print("Introduce tu edad: ");
-
-while (!scanner.hasNextInt()) {
-    System.out.println("Error: introduce un número entero.");
-    scanner.nextLine(); // Descarta la entrada incorrecta.
-    System.out.print("Introduce tu edad: ");
-}
-
-int edad = scanner.nextInt();
-```
-
-Si no descartamos la entrada incorrecta, se comprobaría repetidamente el mismo
-texto y el programa podría quedarse atrapado en un bucle infinito.
-
-#### Validar también el rango
-
-El tipo correcto no garantiza que el valor sea válido. Una edad `-50` es un
-entero, pero no está dentro del rango permitido:
-
-```java
-int edad;
-
-do {
-    System.out.print("Introduce una edad entre 0 y 120: ");
-
-    while (!scanner.hasNextInt()) {
-        System.out.println("Debes introducir un número entero.");
-        scanner.nextLine();
-        System.out.print("Introduce una edad entre 0 y 120: ");
-    }
-
-    edad = scanner.nextInt();
-    scanner.nextLine();
-
-    if (edad < 0 || edad > 120) {
-        System.out.println("La edad debe estar entre 0 y 120.");
-    }
-} while (edad < 0 || edad > 120);
-
-System.out.println("Edad válida: " + edad);
-```
-
-Aquí se comprueban dos cosas diferentes:
-
-- **Tipo:** ¿se ha introducido un entero?
-- **Rango:** ¿ese entero está entre 0 y 120?
+`hasNextInt()` y `hasNextDouble()` permiten saber si el siguiente dato puede
+interpretarse como un número. Estos métodos no consumen la entrada. En la Parte
+1 basta con conocer su finalidad; la aplicación con bucles se reserva para la
+Parte 2.
 
 #### Qué estrategia utilizar en cada parte
 
@@ -264,10 +202,11 @@ En los primeros ejercicios conviene leer líneas y convertirlas:
 int numero = Integer.parseInt(scanner.nextLine());
 ```
 
-Es una estrategia sencilla y consistente. En la Parte 2 utilizaremos
-`hasNextInt()` o `hasNextDouble()` junto con bucles para controlar entradas
-incorrectas y rangos no permitidos. El ejemplo completo de validación se
-encuentra en [`Ejemplo01ValidacionEntrada.java`](src/ejemplos/parte2/Ejemplo01ValidacionEntrada.java).
+Es una estrategia sencilla y consistente para la Parte 1. En la Parte 2
+utilizaremos `hasNextInt()` o `hasNextDouble()` junto con bucles para controlar
+entradas incorrectas y rangos no permitidos. El ejemplo completo de validación
+se encuentra en
+[`Ejemplo01ValidacionEntrada.java`](src/ejemplos/parte2/Ejemplo01ValidacionEntrada.java).
 
 ## Bucle `do-while`
 
@@ -402,6 +341,144 @@ Puedes ver estos dos tipos de variables funcionando juntos en
   valores.
 - Calcular una media sin comprobar antes que la cantidad sea mayor que cero.
 
+## Cadenas de texto (`String`)
+
+### ¿Qué es una cadena?
+
+Una cadena, o `String`, es una secuencia de caracteres: letras, números,
+espacios y símbolos. Se escribe entre comillas dobles:
+
+```java
+String nombre = "Ana";
+String mensaje = "Hola, mundo";
+String codigo = "A-123";
+```
+
+Aunque una cadena contenga números, sigue siendo texto. Por ejemplo,
+`"123"` no es lo mismo que el entero `123`: con el primero se trabaja como
+texto y con el segundo se pueden realizar operaciones matemáticas.
+
+### Leer cadenas con `Scanner`
+
+`nextLine()` lee una línea completa, incluidos los espacios. `next()` lee solo
+la siguiente palabra, hasta encontrar un espacio o separador:
+
+```java
+System.out.print("Escribe tu nombre completo: ");
+String nombre = scanner.nextLine();
+
+System.out.print("Escribe una palabra: ");
+String palabra = scanner.next();
+scanner.nextLine(); // Consume el resto de la línea si vamos a seguir leyendo.
+```
+
+Para nombres, frases y respuestas completas suele ser más cómodo utilizar
+`nextLine()`. Al mezclarlo con `nextInt()` o `nextDouble()` hay que recordar el
+salto de línea pendiente explicado en la sección de `Scanner`.
+
+### Concatenar cadenas
+
+Concatenar significa unir textos. El operador `+` permite construir mensajes:
+
+```java
+String nombre = "Ana";
+int edad = 20;
+
+String mensaje = "Me llamo " + nombre + " y tengo " + edad + " años.";
+System.out.println(mensaje);
+```
+
+Cuando aparece una cadena, Java convierte automáticamente los valores que se
+encuentran después en texto. El orden de las operaciones puede ser importante:
+
+```java
+System.out.println("Resultado: " + 2 + 3); // Resultado: 23
+System.out.println("Resultado: " + (2 + 3)); // Resultado: 5
+```
+
+Los paréntesis indican que primero se hace la suma y después se concatena el
+resultado.
+
+### Caracteres especiales
+
+Algunos caracteres se escriben utilizando una barra inversa (`\`):
+
+```java
+System.out.println("Primera línea\nSegunda línea");
+System.out.println("Una palabra entre \"comillas\"");
+```
+
+Los más habituales son `\n` para salto de línea, `\t` para tabulación y
+`\"` para incluir comillas dobles dentro del texto.
+
+### Métodos básicos de `String`
+
+Las cadenas tienen métodos que permiten consultar o transformar su contenido.
+Estos métodos no modifican la cadena original: devuelven un resultado nuevo.
+
+| Método | Para qué sirve | Ejemplo |
+| --- | --- | --- |
+| `length()` | Cuenta los caracteres | `nombre.length()` |
+| `charAt(indice)` | Obtiene un carácter | `nombre.charAt(0)` |
+| `toUpperCase()` | Convierte a mayúsculas | `nombre.toUpperCase()` |
+| `toLowerCase()` | Convierte a minúsculas | `nombre.toLowerCase()` |
+| `trim()` | Quita espacios al principio y al final | `nombre.trim()` |
+| `isEmpty()` | Comprueba si tiene cero caracteres | `nombre.isEmpty()` |
+
+Los índices empiezan en cero. En la cadena `"Java"`, `charAt(0)` devuelve `J` y
+`charAt(3)` devuelve `a`. Intentar acceder a una posición que no existe produce
+un error, por lo que conviene comprobar antes la longitud cuando el índice
+depende de la entrada.
+
+Ejemplo de uso:
+
+```java
+String texto = "  Java  ";
+String limpio = texto.trim();
+
+System.out.println("Texto: " + limpio);
+System.out.println("Caracteres: " + limpio.length());
+System.out.println("Primera letra: " + limpio.charAt(0));
+System.out.println("Mayúsculas: " + limpio.toUpperCase());
+System.out.println("¿Está vacío? " + limpio.isEmpty());
+```
+
+Como las cadenas son inmutables, `trim()` no cambia `texto`; por eso guardamos
+su resultado en `limpio`. Si queremos conservar el cambio, debemos asignarlo:
+
+```java
+texto = texto.trim();
+```
+
+### Cadenas vacías y espacios
+
+Una cadena vacía (`""`) tiene longitud cero. Una cadena formada por espacios no
+está vacía hasta aplicar `trim()`:
+
+```java
+String entrada = scanner.nextLine().trim();
+
+if (entrada.isEmpty()) {
+    System.out.println("No has escrito ningún texto.");
+}
+```
+
+Este patrón resulta útil para validar nombres y respuestas antes de procesarlas.
+
+### Errores frecuentes al trabajar con cadenas
+
+- Confundir `"123"` con el número `123`.
+- Usar `next()` cuando se necesita leer una frase completa.
+- Olvidar el salto de línea pendiente al mezclar métodos de `Scanner`.
+- Pensar que `toUpperCase()` o `trim()` modifican la variable original.
+- Intentar usar `charAt(0)` sobre una cadena vacía.
+- Confundir concatenar (`+`) con sumar números.
+- Olvidar las comillas dobles al escribir un texto.
+
+Puedes practicar estas operaciones en
+[`Ejemplo05Cadenas.java`](src/ejemplos/parte1/Ejemplo05Cadenas.java). Después
+resuelve los ejercicios 13, 14, 15 y 16 de la Parte 1.
+
 ## Comparar cadenas con `equals()`
 
 ### ¿Qué es?
@@ -475,6 +552,10 @@ diferencia entre `equals()` y `equalsIgnoreCase()`.
 | 10  | MenuOperaciones     | Integrador      |
 | 11  | Tienda              | Integrador      |
 | 12  | GestionNotas        | Integrador      |
+| 13  | AnalizadorTexto     | Básico          |
+| 14  | ValidadorNombre     | Intermedio      |
+| 15  | Respuesta           | Intermedio      |
+| 16  | ContarVocales       | Intermedio      |
 
 ## Pistas para depurar
 
@@ -488,7 +569,7 @@ diferencia entre `equals()` y `equalsIgnoreCase()`.
 
 ## Parte 2 — Ampliación y proyectos
 
-Cuando hayas terminado los 12 ejercicios de la Parte 1, continúa aquí. Esta
+Cuando hayas terminado los 16 ejercicios de la Parte 1, continúa aquí. Esta
 parte reutiliza `Scanner`, condicionales, bucles, `equals()` y acumuladores, pero
 añade validación más resistente, bucles anidados, números aleatorios y proyectos
 más largos. Todavía no hace falta utilizar arrays, métodos propios ni clases.
