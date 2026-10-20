@@ -2,6 +2,20 @@
 
 **1.º DAM · Java 21 · Sin Maven ni dependencias externas**
 
+> 📚 **Material didáctico | CFGS Desarrollo de Aplicaciones Multiplataforma**
+>
+> **Curso:** 1.º DAM  
+> **Módulo:** Programación  
+> **Profesor y autor:** Christian Bihurriet  
+> **Centro educativo:** CESUR
+>
+> Repositorio de material docente elaborado para la enseñanza de la
+> programación en el Ciclo Formativo de Grado Superior en Desarrollo de
+> Aplicaciones Multiplataforma (DAM).
+>
+> Incluye explicaciones, ejemplos progresivos y ejercicios diseñados para
+> estudiantes que están aprendiendo a programar.
+
 ## Parte 1 — Fundamentos e integración inicial
 
 ## Objetivo
@@ -591,3 +605,12 @@ java -cp out ejercicios.parte2.Ejercicio01EntradaSegura
 Los paquetes `ejemplos.parte1`, `ejemplos.parte2`, `ejercicios.parte1` y
 `ejercicios.parte2` permiten reiniciar la numeración sin que existan dos clases
 con el mismo nombre completo.
+
+## Sobre este repositorio
+
+Este proyecto forma parte de una colección de recursos educativos desarrollados
+por Christian Bihurriet para sus clases del módulo de Programación en el Ciclo
+Formativo de Grado Superior en Desarrollo de Aplicaciones Multiplataforma.
+
+El código está adaptado deliberadamente al nivel del alumnado y prioriza la
+claridad didáctica sobre la complejidad técnica.
