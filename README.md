@@ -208,6 +208,9 @@ entradas incorrectas y rangos no permitidos. El ejemplo completo de validación
 se encuentra en
 [`Ejemplo01ValidacionEntrada.java`](src/ejemplos/parte2/Ejemplo01ValidacionEntrada.java).
 
+**Ahora practica:**
+[`Ejercicio 01 — Tabla de multiplicar`](src/ejercicios/parte1/Ejercicio01TablaMultiplicar.java).
+
 ## Bucle `do-while`
 
 ### ¿Qué es?
@@ -262,6 +265,11 @@ que combina `do-while`, `Scanner` y `switch`.
   repite **mientras la opción sea distinta de 0**.
 - Utilizar una variable antes de darle un valor. En un `do-while` normalmente se
   lee o actualiza dentro del bloque antes de comprobarla.
+
+**Ahora practica:**
+[`Ejercicio 08 — Cajero automático`](src/ejercicios/parte1/Ejercicio08CajeroAutomatico.java)
+y
+[`Ejercicio 10 — Menú de operaciones`](src/ejercicios/parte1/Ejercicio10MenuOperaciones.java).
 
 ## Contadores y acumuladores
 
@@ -340,6 +348,12 @@ Puedes ver estos dos tipos de variables funcionando juntos en
 - Confundir el contador con el acumulador: uno cuenta datos y el otro suma sus
   valores.
 - Calcular una media sin comprobar antes que la cantidad sea mayor que cero.
+
+**Ahora practica:**
+[`Ejercicio 06 — Suma acumulada`](src/ejercicios/parte1/Ejercicio06SumaAcumulada.java),
+[`Ejercicio 07 — Adivina el número`](src/ejercicios/parte1/Ejercicio07AdivinaNumero.java),
+[`Ejercicio 11 — Tienda`](src/ejercicios/parte1/Ejercicio11Tienda.java) y
+[`Ejercicio 12 — Gestión de notas`](src/ejercicios/parte1/Ejercicio12GestionNotas.java).
 
 ## Cadenas de texto (`String`)
 
@@ -477,7 +491,11 @@ Este patrón resulta útil para validar nombres y respuestas antes de procesarla
 
 Puedes practicar estas operaciones en
 [`Ejemplo05Cadenas.java`](src/ejemplos/parte1/Ejemplo05Cadenas.java). Después
-resuelve los ejercicios 13, 14, 15 y 16 de la Parte 1.
+resuelve
+[`Ejercicio 13 — Analizador de texto`](src/ejercicios/parte1/Ejercicio13AnalizadorTexto.java),
+[`Ejercicio 14 — Validador de nombre`](src/ejercicios/parte1/Ejercicio14ValidadorNombre.java),
+[`Ejercicio 15 — Respuesta`](src/ejercicios/parte1/Ejercicio15Respuesta.java) y
+[`Ejercicio 16 — Contar vocales`](src/ejercicios/parte1/Ejercicio16ContarVocales.java).
 
 ## Comparar cadenas con `equals()`
 
@@ -536,26 +554,31 @@ diferencia entre `equals()` y `equalsIgnoreCase()`.
   que `sí` se interpretaría como el nombre de una variable.
 - Comparar antes de leer la respuesta actual dentro de un bucle.
 
+**Ahora practica:**
+[`Ejercicio 09 — Validador de contraseña`](src/ejercicios/parte1/Ejercicio09ValidadorContrasena.java)
+y
+[`Ejercicio 15 — Respuesta`](src/ejercicios/parte1/Ejercicio15Respuesta.java).
+
 ## Ejercicios y dificultad
 
 | N.º | Ejercicio           | Nivel           |
 | --- | ------------------- | --------------- |
-| 01  | TablaMultiplicar    | Básico          |
-| 02  | ParImpar            | Básico          |
-| 03  | MayorDeTres         | Básico          |
-| 04  | Calculadora         | Intermedio      |
-| 05  | ControlAcceso       | Intermedio      |
-| 06  | SumaAcumulada       | Intermedio      |
-| 07  | AdivinaNumero       | Intermedio-alto |
-| 08  | CajeroAutomatico    | Intermedio-alto |
-| 09  | ValidadorContrasena | Intermedio-alto |
-| 10  | MenuOperaciones     | Integrador      |
-| 11  | Tienda              | Integrador      |
-| 12  | GestionNotas        | Integrador      |
-| 13  | AnalizadorTexto     | Básico          |
-| 14  | ValidadorNombre     | Intermedio      |
-| 15  | Respuesta           | Intermedio      |
-| 16  | ContarVocales       | Intermedio      |
+| 01  | [TablaMultiplicar](src/ejercicios/parte1/Ejercicio01TablaMultiplicar.java) | Básico          |
+| 02  | [ParImpar](src/ejercicios/parte1/Ejercicio02ParImpar.java) | Básico          |
+| 03  | [MayorDeTres](src/ejercicios/parte1/Ejercicio03MayorDeTres.java) | Básico          |
+| 04  | [Calculadora](src/ejercicios/parte1/Ejercicio04Calculadora.java) | Intermedio      |
+| 05  | [ControlAcceso](src/ejercicios/parte1/Ejercicio05ControlAcceso.java) | Intermedio      |
+| 06  | [SumaAcumulada](src/ejercicios/parte1/Ejercicio06SumaAcumulada.java) | Intermedio      |
+| 07  | [AdivinaNumero](src/ejercicios/parte1/Ejercicio07AdivinaNumero.java) | Intermedio-alto |
+| 08  | [CajeroAutomatico](src/ejercicios/parte1/Ejercicio08CajeroAutomatico.java) | Intermedio-alto |
+| 09  | [ValidadorContrasena](src/ejercicios/parte1/Ejercicio09ValidadorContrasena.java) | Intermedio-alto |
+| 10  | [MenuOperaciones](src/ejercicios/parte1/Ejercicio10MenuOperaciones.java) | Integrador      |
+| 11  | [Tienda](src/ejercicios/parte1/Ejercicio11Tienda.java) | Integrador      |
+| 12  | [GestionNotas](src/ejercicios/parte1/Ejercicio12GestionNotas.java) | Integrador      |
+| 13  | [AnalizadorTexto](src/ejercicios/parte1/Ejercicio13AnalizadorTexto.java) | Básico          |
+| 14  | [ValidadorNombre](src/ejercicios/parte1/Ejercicio14ValidadorNombre.java) | Intermedio      |
+| 15  | [Respuesta](src/ejercicios/parte1/Ejercicio15Respuesta.java) | Intermedio      |
+| 16  | [ContarVocales](src/ejercicios/parte1/Ejercicio16ContarVocales.java) | Intermedio      |
 
 ## Pistas para depurar
 
@@ -583,7 +606,10 @@ a preguntar. También se pueden validar rangos: una edad puede estar entre 0 y
 120, y una nota entre 0 y 10.
 
 Consulta [`Ejemplo01ValidacionEntrada.java`](src/ejemplos/parte2/Ejemplo01ValidacionEntrada.java)
-y completa los ejercicios 01 y 02.
+y completa
+[`Ejercicio 01 — Entrada segura`](src/ejercicios/parte2/Ejercicio01EntradaSegura.java)
+y
+[`Ejercicio 02 — Menú validado`](src/ejercicios/parte2/Ejercicio02MenuValidado.java).
 
 ### Estadísticas con cantidad desconocida
 
@@ -595,7 +621,10 @@ empezar siempre por cero.
 
 [`Ejemplo02Estadisticas.java`](src/ejemplos/parte2/Ejemplo02Estadisticas.java)
 muestra esta técnica y comprueba también el caso en que no se introduce ningún
-dato. Continúa con los ejercicios 03 y 04.
+dato. Continúa con
+[`Ejercicio 03 — Temperaturas`](src/ejercicios/parte2/Ejercicio03Temperaturas.java)
+y
+[`Ejercicio 04 — Clasificación de resultados`](src/ejercicios/parte2/Ejercicio04ClasificacionResultados.java).
 
 ### Bucles anidados
 
@@ -606,7 +635,10 @@ figuras con `print()` y `println()`.
 
 Ejecuta [`Ejemplo03BuclesAnidados.java`](src/ejemplos/parte2/Ejemplo03BuclesAnidados.java)
 y [`Ejemplo04Figuras.java`](src/ejemplos/parte2/Ejemplo04Figuras.java). Después
-resuelve los ejercicios 05, 06 y 07.
+resuelve
+[`Ejercicio 05 — Rectángulo`](src/ejercicios/parte2/Ejercicio05Rectangulo.java),
+[`Ejercicio 06 — Triángulo`](src/ejercicios/parte2/Ejercicio06Triangulo.java) y
+[`Ejercicio 07 — Tablas de multiplicar`](src/ejercicios/parte2/Ejercicio07TablasMultiplicar.java).
 
 ### Números aleatorios
 
@@ -615,7 +647,10 @@ La clase `Random` genera valores distintos en cada ejecución. Por ejemplo,
 los resultados sigue necesitando un acumulador, igual que en la Parte 1.
 
 [`Ejemplo05NumerosAleatorios.java`](src/ejemplos/parte2/Ejemplo05NumerosAleatorios.java)
-simula cinco lanzamientos. Completa después los ejercicios 08 y 09.
+simula cinco lanzamientos. Completa después
+[`Ejercicio 08 — Adivina el número aleatorio`](src/ejercicios/parte2/Ejercicio08AdivinaNumeroAleatorio.java)
+y
+[`Ejercicio 09 — Lanzamiento de dados`](src/ejercicios/parte2/Ejercicio09LanzamientoDados.java).
 
 ### Juegos y comparación de texto
 
@@ -624,8 +659,11 @@ permite crear juegos pequeños. Hay que distinguir entre una opción no válida,
 un empate y una partida ganada o perdida.
 
 [`Ejemplo06PiedraPapelTijera.java`](src/ejemplos/parte2/Ejemplo06PiedraPapelTijera.java)
-es una demostración de una ronda. Los ejercicios 10 y 11 amplían la idea con
-varias rondas y contadores.
+es una demostración de una ronda.
+[`Ejercicio 10 — Piedra, papel o tijera`](src/ejercicios/parte2/Ejercicio10PiedraPapelTijera.java)
+y
+[`Ejercicio 11 — Cara o cruz`](src/ejercicios/parte2/Ejercicio11CaraOCruz.java)
+amplían la idea con varias rondas y contadores.
 
 ### `break` y `continue`
 
@@ -635,7 +673,8 @@ conviene usarlos solo cuando hacen el recorrido más claro.
 
 En [`Ejemplo07BreakContinue.java`](src/ejemplos/parte2/Ejemplo07BreakContinue.java)
 `break` termina al introducir cero y `continue` ignora números negativos. El
-ejercicio 12 practica ambas instrucciones.
+[`Ejercicio 12 — Números válidos`](src/ejercicios/parte2/Ejercicio12NumerosValidos.java)
+practica ambas instrucciones.
 
 ### Proyectos integradores
 
@@ -644,9 +683,9 @@ contadores y acumuladores. Elige al menos uno para realizarlo completo:
 
 | N.º | Proyecto | Contenidos principales |
 | --- | --- | --- |
-| 13 | Máquina expendedora | menú, precios y total de compra |
-| 14 | Aparcamiento | horas, tarifas, vehículos y recaudación |
-| 15 | Entradas de cine | edades, precios y ventas |
+| 13 | [Máquina expendedora](src/ejercicios/parte2/Ejercicio13MaquinaExpendedora.java) | menú, precios y total de compra |
+| 14 | [Aparcamiento](src/ejercicios/parte2/Ejercicio14Aparcamiento.java) | horas, tarifas, vehículos y recaudación |
+| 15 | [Entradas de cine](src/ejercicios/parte2/Ejercicio15EntradasCine.java) | edades, precios y ventas |
 
 Todos los enunciados están en
 [`src/ejercicios/parte2`](src/ejercicios/parte2). Sus clases empiezan vacías a
@@ -656,21 +695,21 @@ propósito: diseña primero el algoritmo y después escribe el código.
 
 | N.º | Ejercicio | Nivel |
 | --- | --- | --- |
-| 01 | EntradaSegura | Básico |
-| 02 | MenuValidado | Básico |
-| 03 | Temperaturas | Intermedio |
-| 04 | ClasificacionResultados | Intermedio |
-| 05 | Rectangulo | Intermedio |
-| 06 | Triangulo | Intermedio |
-| 07 | TablasMultiplicar | Intermedio |
-| 08 | AdivinaNumeroAleatorio | Intermedio-alto |
-| 09 | LanzamientoDados | Intermedio-alto |
-| 10 | PiedraPapelTijera | Intermedio-alto |
-| 11 | CaraOCruz | Intermedio-alto |
-| 12 | NumerosValidos | Intermedio-alto |
-| 13 | MaquinaExpendedora | Integrador |
-| 14 | Aparcamiento | Integrador |
-| 15 | EntradasCine | Integrador |
+| 01 | [EntradaSegura](src/ejercicios/parte2/Ejercicio01EntradaSegura.java) | Básico |
+| 02 | [MenuValidado](src/ejercicios/parte2/Ejercicio02MenuValidado.java) | Básico |
+| 03 | [Temperaturas](src/ejercicios/parte2/Ejercicio03Temperaturas.java) | Intermedio |
+| 04 | [ClasificacionResultados](src/ejercicios/parte2/Ejercicio04ClasificacionResultados.java) | Intermedio |
+| 05 | [Rectangulo](src/ejercicios/parte2/Ejercicio05Rectangulo.java) | Intermedio |
+| 06 | [Triangulo](src/ejercicios/parte2/Ejercicio06Triangulo.java) | Intermedio |
+| 07 | [TablasMultiplicar](src/ejercicios/parte2/Ejercicio07TablasMultiplicar.java) | Intermedio |
+| 08 | [AdivinaNumeroAleatorio](src/ejercicios/parte2/Ejercicio08AdivinaNumeroAleatorio.java) | Intermedio-alto |
+| 09 | [LanzamientoDados](src/ejercicios/parte2/Ejercicio09LanzamientoDados.java) | Intermedio-alto |
+| 10 | [PiedraPapelTijera](src/ejercicios/parte2/Ejercicio10PiedraPapelTijera.java) | Intermedio-alto |
+| 11 | [CaraOCruz](src/ejercicios/parte2/Ejercicio11CaraOCruz.java) | Intermedio-alto |
+| 12 | [NumerosValidos](src/ejercicios/parte2/Ejercicio12NumerosValidos.java) | Intermedio-alto |
+| 13 | [MaquinaExpendedora](src/ejercicios/parte2/Ejercicio13MaquinaExpendedora.java) | Integrador |
+| 14 | [Aparcamiento](src/ejercicios/parte2/Ejercicio14Aparcamiento.java) | Integrador |
+| 15 | [EntradasCine](src/ejercicios/parte2/Ejercicio15EntradasCine.java) | Integrador |
 
 ### Ejecutar la Parte 2
 
